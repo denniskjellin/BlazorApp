@@ -1,0 +1,40 @@
+@page "/json"
+@inject HttpClient Http
+
+<PageTitle>Json</PageTitle>
+
+<h1>Writing out Data from JSON</h1>
+<div>
+<p class="mt-1">On this page the data in 'driver.json' is getting fetched and then looped out to the screen!</p>
+<h2 class="mt-3">Some awesome drivers</h2>
+
+<!--Making a controll if we have drivers or not-->
+@if (drivers == null)
+    {
+        <p>Loading...</p>
+    }
+    else
+    {
+        @foreach (var driver in drivers)
+        { 
+                <p><strong>Driver:</strong> @driver.name</p>
+        }
+    }
+
+
+    @code {
+        private Driver[] drivers;
+
+        //fetch
+        protected override async Task OnInitializedAsync()
+        {
+            drivers = await Http.GetFromJsonAsync<Driver[]>("driver.json");
+        }
+
+        // creating a driver Class.
+        public class Driver
+        {
+            public string name { get; set; }
+        }
+}
+</div>
