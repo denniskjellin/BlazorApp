@@ -1,0 +1,23 @@
+.footer-container p {
+	color: white;
+	background-color: #314547;
+    color: #fff; /* white text color */
+    padding: 20px; /* adds padding around the content */
+    text-align: center;
+	min-height: 5vh;
+}
+  .footer-container a {
+	text-decoration: none;
+	color: white;
+  }
+  footer a:hover{
+	text-decoration: underline;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+  }
