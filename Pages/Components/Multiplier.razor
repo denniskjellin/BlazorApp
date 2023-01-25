@@ -1,0 +1,26 @@
+<h3>Component exempel</h3>
+
+<div class="form-container mr-3 mt-3">
+<label class="form-label" for="num1">Ange nummer</label><br>
+<input type="number" class="form-input" @bind="num1" />
+<br />
+<label class="form-label" for="num2">Ange nummer:</label><br>
+<input type="number" class="form-input" @bind="num2" />
+<br />
+<button class="btn mt-3 mb-3" @onclick="Calculate">Multiplicera</button>
+<br />
+<p class="mt-1"><strong>Resultat: </strong>@summary</p>
+</div>
+
+@code {
+     // initiate variables
+     private double summary;
+    private double num1 = 0;
+    private double num2 = 0;
+
+    // using math round to round up to choosen decimal of : 1.
+    private void Calculate()
+    {   // calculation
+        summary = num1 * num2;
+    }
+}
