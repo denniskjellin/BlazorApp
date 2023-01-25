@@ -1,4 +1,10 @@
-
+/*
+Base
+*/* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
 /* set default font*/
 p, span, strong, a {
@@ -11,17 +17,39 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-.valid.modified:not([type=checkbox]) {
-    outline: 1px solid #26b050;
+
+.sidebar {
+    background-color: #3b6064;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+
 }
 
-.invalid {
-    outline: 1px solid red;
+.sidebar .menu .sidebar-li {
+	display: block;
+	padding: 0em;
+	color: #FFF;
+	text-decoration: none;
+	transition: 0.2s linear;
+	width: 100%;
+	text-align: center;
 }
 
-.validation-message {
-    color: red;
+
+.sidebar .menu .sidebar-li:hover,
+.sidebar .menu .sidebar.active {
+	color: #3bba9c;
+	border-right: 5px solid #3bba9c;
 }
+
+
+.sidebar .menu .sidebar-li:hover {
+	border-right: 5px solid #3bba9c;
+}
+
+
+
+
 
 
 #blazor-error-ui {

@@ -7,28 +7,17 @@
 main {
     flex: 1;
     min-height: 90vh;
+    margin: 2rem;
 }
 
 body {
 	background-color: #fafafa;
 }
 
-/* set default font*/
-p, span, strong, a {
-	font-family: 'Poppins', sans-serif;
-	color:#1a1a1a
-}
 
-/* heading fonts*/
-h1,h2,h3,h4,h5,h6 {
-	font-family: 'Montserrat', sans-serif;
-	color:#414141
-}
 
-.sidebar {
-    background-color: #3b6064;
 
-}
+
 
 
 @media (min-width: 641px) {
