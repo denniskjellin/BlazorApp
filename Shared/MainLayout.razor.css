@@ -16,10 +16,6 @@ body {
 
 
 
-
-
-
-
 @media (min-width: 641px) {
     .page {
         flex-direction: row;
@@ -31,4 +27,15 @@ body {
         position: sticky;
         top: 0;
     }
+    
+}
+
+@media (max-width: 572px) {
+	
+
+    .sidebar {
+       max-width: 480px;
+   }
+
+   
 }
