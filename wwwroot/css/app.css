@@ -7,7 +7,7 @@ Base
 }
 
 /* set default font*/
-p, span, strong, a {
+p, span, strong, a, article {
 	font-family: 'Poppins', sans-serif;
 }
 
