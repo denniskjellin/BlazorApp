@@ -4,6 +4,50 @@
 
 <h1>Convert</h1>
 
-Welcome to Convert page.
+<p class="mb-3">On this page you can convert meters to foot or kilometers per hour to miles per hour!</p>
 
+<div class="form-container">
+<label class="form-label" for="meters">Convert meters to foot:</label><br>
+<input type="number" class="form-input" @bind="meter" />
+<br />
+<button class="btn mt-3 mb-3" @onclick="Calculate">Calculate</button>
+<br />
+<p class="result">Result</p>
+<p class="mt-1">@meter meter in foot is equal to <strong>@foot foot</strong></p>
+</div>
 
+<div class="form-container mr-3 mt-3">
+<label class="form-label" for="meters">Convert km/h to mp/h:</label><br>
+<input type="number" class="form-input" @bind="kmh" />
+<br />
+<button class="btn mt-3 mb-3" @onclick="CalculateKmh">Calculate</button>
+<br />
+<p class="result">Result</p>
+<p class="mt-1">@kmh km/h in miles per hour is equal to <strong>@miles miles/hour</strong> </p>
+</div>
+
+@code {
+     // initiate variables
+    private double foot;
+    private double meter = 0;
+
+    // using math round to round up to choosen decimal of : 1.
+    private void Calculate()
+    {   // calculation
+        foot = Math.Round((meter * 3.2808), 1);
+    }
+}
+
+@code {
+    // initiate variables
+    private double miles;
+    private double kmh = 0;
+
+    // using math round to round up to choosen decimal of : 0.
+    private void CalculateKmh()
+    {
+        // calculation
+        miles = kmh * 0.621371;
+        miles = Math.Round(miles);
+    }
+}
